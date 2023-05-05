@@ -3,6 +3,7 @@ import "dotenv/config";
 
 import {LOCAL_PORT} from "./config/const.js";
 import router from "./routes/home.routes.js";
+import recipesRouter from "./routes/recipes.routes.js";
 
 
 const PORT = LOCAL_PORT || process.env.PORT;
@@ -17,6 +18,7 @@ app
     .use(express.static("public"))
     .use(express.urlencoded({ extended: true }))
     .use(express.json())
-    .use(router);
+    .use(router)
+    .use(recipesRouter);
 
 app.listen(PORT, () => console.log(`Listening at http://localhost:${PORT}`));

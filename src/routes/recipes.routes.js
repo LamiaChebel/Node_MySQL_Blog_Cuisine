@@ -1,9 +1,10 @@
-// import { Router } from "express";
+import { Router } from "express";
+import recipesView from "../controllers/recipes.js";
+import recipeDetailView from '../controllers/recipeDetail.js';
 
-// const router = Router();
+const recipesRouter = Router();
 
-// router.get("/", (req, res) => {
-//     res.status(200).render("layout", {template : "recipes"});
-// });
+recipesRouter.get("/recipes", recipesView);
+recipesRouter.get("/detail/?:id", recipeDetailView);
 
-// export default router ;
+export default recipesRouter ;

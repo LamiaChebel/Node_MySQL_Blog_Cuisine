@@ -1,24 +1,21 @@
 <main>
     <section>
         <h2>Liste de nos recettes en tout genre</h2>
-        <p>Affichage de <%#= article.length %> recettes </p>
-        <!-- <%# for( const a of articles ) { %>
+        <p>Affichage de <%= article.length %> recettes </p>
+        <% for( const a of article ) { %>
             <article>
                 <h3>
-                    <%#= article.title %>
+                    <%= a.title %>
                 </h3>
-                    <img src="<%#= article.url_image %>" alt="<%#= article.title_image %>">
-                    <a href="./recipes/?:id">Lire la suite</a>
-                    <aside>
-                        <p>Author(s) : <%#=  user.alias %>, date :  <%#=  user.date %></p>
-                    </aside>
+                    <img src="<%= a.url %>" alt="<%= a.pictureTitle %>">
+                    <a href="./<%= a.title%>/?:id<%= a.id %>">Lire la suite</a>
     
             </article>            
-            <%# } %>
+            <% } %>
             
         </section>
 
-        <aside>
+        <!-- <aside>
             <section>
                 <h4>Catégories</h4>
                 <ul>
