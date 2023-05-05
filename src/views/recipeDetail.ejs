@@ -1,21 +1,21 @@
 <main>
     <section>
         <h2>Liste de nos recettes en tout genre</h2>
-        <p>Affichage de <%= article.length %> recettes </p>
-        <% for( const a of articles ) { %>
+        <!-- <p>Affichage de <%#= article.length %> recettes </p>
+        <%# for( const a of articles ) { %>
             <article>
                 <h3>
-                    <%= article.title %>
+                    <%#= article.title %>
                 </h3>
-                    <img src="<%= article.url_image %>" alt="<%= article.title_image %>">
-                    <p>Ingrédients : <%= article.description %>
+                    <img src="<%#= article.url_image %>" alt="<%#= article.title_image %>">
+                    <p>Ingrédients : <%#= article.description %>
                     </p>
                     <aside>
                         <p>user, date</p>
                     </aside>
     
             </article>            
-            <% } %>
+            <%# } %> -->
             
             <form action="" method="post">
                 <fieldset>
@@ -28,14 +28,15 @@
             </form>
         </section>
 
-        <aside>
+        <!-- <aside>
             <section>
                 <h4>Catégories</h4>
                 <ul>
-                    <% for( const category of categories ) { %>
-                    <li>: <%= category.title %></li>
-                    <% } %>
+                    <%# for( const category of categories ) { %>
+                    <li>: <%#= category.title %></li>
+                    <%# } %>
                 </ul>
 
             </section>
-        </aside>
+        </aside> -->
+</main>
