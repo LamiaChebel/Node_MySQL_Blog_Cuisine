@@ -16,5 +16,5 @@ Exemple:
 - [x] une permettant de récupérer toutes les catégories
 - [x] une permettant de récupérer tous les coms
 - [x] une permettant de récupérer UNE catégorie par l'id
-- [x] une permettant de récupérer toutes les stories avec avec le nom de l'auteur, les com associés, la catégorie..
+- [x] une permettant de récupérer toutes les stories avec le nom de l'auteur, les com associés, la catégorie..
 - ... 
