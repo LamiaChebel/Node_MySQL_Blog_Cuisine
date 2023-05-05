@@ -5,6 +5,6 @@ import recipeDetailView from '../controllers/recipeDetail.js';
 const recipesRouter = Router();
 
 recipesRouter.get("/recipes", recipesView);
-recipesRouter.get("/detail/?:id", recipeDetailView);
+recipesRouter.get("/recipe/:id", recipeDetailView);
 
 export default recipesRouter ;

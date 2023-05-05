@@ -1,4 +1,8 @@
 <main>
+    <header>
+        <h1>Des nouvelles recettes chaque semaine !</h1>
+        <p>Vous surprendre grâce à nos recettes simples, rapides, et bien sûr, pour tous les budgets.</p>
+    </header>
     <section>
         <h2>Liste de nos recettes en tout genre</h2>
         <p>Affichage de <%= article.length %> recettes </p>
@@ -8,7 +12,7 @@
                     <%= a.title %>
                 </h3>
                     <img src="<%= a.url %>" alt="<%= a.pictureTitle %>">
-                    <a href="./<%= a.title%>/?:id<%= a.id %>">Lire la suite</a>
+                    <a href="/recipe/:<%= a.id %>">Lire la suite</a>
     
             </article>            
             <% } %>
