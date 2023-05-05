@@ -1,0 +1,41 @@
+<main>
+    <section>
+        <h2>Liste de nos recettes en tout genre</h2>
+        <p>Affichage de <%= article.length %> recettes </p>
+        <% for( const a of articles ) { %>
+            <article>
+                <h3>
+                    <%= article.title %>
+                </h3>
+                    <img src="<%= article.url_image %>" alt="<%= article.title_image %>">
+                    <p>Ingrédients : <%= article.description %>
+                    </p>
+                    <aside>
+                        <p>user, date</p>
+                    </aside>
+    
+            </article>            
+            <% } %>
+            
+            <form action="" method="post">
+                <fieldset>
+                    <input type="text" name="alias" id="alias" placeholder="Entrez votre alias">
+                    <input type="password" name="password" id="password" placeholder="Entrez votre mot de passe">
+                    <textarea name="comment" id="comment" cols="70" rows="10"></textarea>
+                    <input type="submit" value="Poster">
+                    <!-- condition ternaire sur le bouton -->
+                </fieldset>
+            </form>
+        </section>
+
+        <aside>
+            <section>
+                <h4>Catégories</h4>
+                <ul>
+                    <% for( const category of categories ) { %>
+                    <li>: <%= category.title %></li>
+                    <% } %>
+                </ul>
+
+            </section>
+        </aside>

@@ -7,7 +7,7 @@ import { pool } from "./config/database.js";
 // on récupère la variable d'environnement
 import { LOCAL_PORT } from "./config/const.js";
 
-const PORT = process.env.PORT || process.env.LOCAL_PORT;
+const PORT = process.env.PORT || LOCAL_PORT;
 
 const app = express();
 
@@ -21,7 +21,7 @@ app
 
 // route pour vérifier la connexion de notre application (serveur)
 app.get("/", (req, res) => {
-    res.json({ msg: "app running" });
+    res.status(200).render("layout", {template : "home"});
 });
 
 // route api permettant de récupérer toutes les catégories
@@ -29,7 +29,7 @@ app.get("/", (req, res) => {
 //la dite requète tant qu'elle ne nous a pas retourné les données puisqu'on en a 
 //besoin pour les traiter 
 
-app.get("/api/v1/category", async (req, res) => {
+app.get("/categories", async (req, res) => {
     
     // le bloc try catch permets de gérer des instructions asynchrones
     // try -> test les instructions, si il y a une erreur ça passe dans le bloc catch

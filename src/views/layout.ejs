@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <link rel="stylesheet" href="../public/style.css">
+    <title>CuistoBlog - Le blog des amoureux de la bonne bouffe</title>
+</head>
+<body>
+
+    <header>
+        <h1>Des nouvelles recettes chaque semaine !</h1>
+        <p>Vous surprendre grâce à nos recettes simples, rapides, et bien sûr, pour tous les budgets.</p>
+        
+        <nav>
+            <a href="./">Accueil</a>
+            <a href="./recipes">Recettes de Cuisine</a>
+            <a href="./auth"><i class="fa-solid fa-circle-user"></i> Connexion</a>
+            <a href="./admin"><i class="fa-solid fa-user-lock"></i> Accès Admin</a>
+        </nav>
+    </header>
+
+    <%- include(template) %>
+
+    <footer>
+        <p>© Copyright 2023LC-CuistoBlog</p>
+    </footer>
+
+</body>
+</html>
