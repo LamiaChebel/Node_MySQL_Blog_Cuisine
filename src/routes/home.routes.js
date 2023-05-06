@@ -1,6 +1,6 @@
 import { Router } from "express";
 import homeView  from "../controllers/home.js";
-const router = Router();
+const homeRouter = Router();
 
-router.get("/", homeView);
-export default router ;
+homeRouter.get("/", homeView);
+export default homeRouter ;

@@ -1,37 +1,43 @@
 <main>
     <article>
                 <h2>
-                    <%= article[0].title %>
+                    <%= recipe.title %>
                 </h2>
-                    <img src="<%= article.url %>" alt="<%= article.pictureTitle %>">
-                    <p><%= article.content %>
+                    <img src="<%= recipe.url %>" alt="<%= recipe.pictureTitle %>">
+                    <p><%= recipe.content %>
                     </p>
                     <aside>
-                        <p>Par la plume de <%#= user.alias %>, écrit le <%= article.date %>/p>
+                        <p>Par la plume de <%= recipe.alias %>, écrit le <%= recipe.date.toLocaleDateString() %></p>
                     </aside>
     
             </article>            
             
-            <form action="" method="post">
+            <form action="/comments/post/<%=recipe.id%>" method="post">
                 <fieldset>
                     <input type="text" name="alias" id="alias" placeholder="Entrez votre alias">
-                    <input type="password" name="password" id="password" placeholder="Entrez votre mot de passe">
-                    <textarea name="comment" id="comment" cols="70" rows="10"></textarea>
+                    <input type="mail" name="mail" id="mail" placeholder="Entrez votre mail">
+                    <textarea name="message" id="message" cols="70" rows="10"></textarea>
                     <input type="submit" value="Poster">
-                    <!-- condition ternaire sur le bouton -->
                 </fieldset>
             </form>
         </section>
 
-        <!-- <aside>
-            <section>
-                <h3>Catégories</h3>
-                <ul>
-                    <%# for( const category of categories ) { %>
-                    <li>: <%#= category.title %></li>
-                    <%# } %>
-                </ul>
 
-            </section>
-        </aside> -->
+        <aside class="comments">
+            <ul>
+                <% for( const comment of comments) { %>
+                <li>
+                    <section id="comment-<%= comment.id %>">
+                        <h5><%= comment.alias %></h5>
+                        <p><%= comment.date.toLocaleString() %></p>
+                        <p><%= comment.message %></p>
+                    </section>
+                </li>
+                    <% } %>
+        
+            </ul>
+        </aside>
+
+        <%- include("asideCategory") %>
+
 </main>

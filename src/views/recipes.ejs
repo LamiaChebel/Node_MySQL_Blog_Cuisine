@@ -12,22 +12,12 @@
                     <%= a.title %>
                 </h3>
                     <img src="<%= a.url %>" alt="<%= a.pictureTitle %>">
-                    <a href="/recipe/:<%= a.id %>">Lire la suite</a>
+                    <a href="/recipe/<%= a.id %>">Découvrez la recette !</a>
     
             </article>            
             <% } %>
             
         </section>
 
-        <!-- <aside>
-            <section>
-                <h4>Catégories</h4>
-                <ul>
-                    <%# for( const category of categories ) { %>
-                    <li>: <%#= category.title %></li>
-                    <%# } %>
-                </ul>
-
-            </section>
-        </aside> -->
+        <%- include("asideCategory") %>
 </main>
