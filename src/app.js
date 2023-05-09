@@ -17,10 +17,11 @@ app
 
 app
     .use(express.static("../public"))
-    .use(express.urlencoded({ extended: true }))
     .use(express.json())
+    .use(express.urlencoded({ extended: true }))
     .use(homeRouter)
     .use(recipesRouter)
     .use(commentsRouter);
+
 
 app.listen(PORT, () => console.log(`Listening at http://localhost:${PORT}`));

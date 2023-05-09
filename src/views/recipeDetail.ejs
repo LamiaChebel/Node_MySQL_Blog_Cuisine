@@ -3,7 +3,12 @@
                 <h2>
                     <%= recipe.title %>
                 </h2>
-                    <img src="<%= recipe.url %>" alt="<%= recipe.pictureTitle %>">
+                    <% for( const image of images) { %>
+                        <figure>
+                            <img src="<%= image.url %>" alt="<%= image.title %>"><br>
+                            
+                        </figure>
+                        <% } %>
                     <p><%= recipe.content %>
                     </p>
                     <aside>
@@ -12,10 +17,9 @@
     
             </article>            
             
-            <form action="/comments/post/<%=recipe.id%>" method="post">
+            <form id="commentForm" action="/comments/post/<%=recipe.id%>" method="post">
                 <fieldset>
-                    <input type="text" name="alias" id="alias" placeholder="Entrez votre alias">
-                    <input type="mail" name="mail" id="mail" placeholder="Entrez votre mail">
+                    <input type="text" name="post_author" id="post_author" placeholder="Entrez votre alias">
                     <textarea name="message" id="message" cols="70" rows="10"></textarea>
                     <input type="submit" value="Poster">
                 </fieldset>
@@ -28,7 +32,7 @@
                 <% for( const comment of comments) { %>
                 <li>
                     <section id="comment-<%= comment.id %>">
-                        <h5><%= comment.alias %></h5>
+                        <h5><%= comment.post_author %></h5>
                         <p><%= comment.date.toLocaleString() %></p>
                         <p><%= comment.message %></p>
                     </section>

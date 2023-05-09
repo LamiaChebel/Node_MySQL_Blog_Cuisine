@@ -12,3 +12,4 @@ export const pool = mysql.createPool({
 });
 
 pool.getConnection().then(res => console.log(`Connected to your ${res.config.database}`));
+
