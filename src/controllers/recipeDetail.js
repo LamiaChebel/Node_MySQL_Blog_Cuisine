@@ -14,7 +14,7 @@ const recipeDetailView = async (req, res) => {
         const imageQuery = `SELECT picture.title, picture.url, picture.article_id FROM picture
                             WHERE picture.article_id = ?`;
 
-        const categoryQuery = `SELECT category.title FROM category ORDER BY category.title ASC`;
+        const categoryQuery = `SELECT category.id , category.title FROM category ORDER BY category.title ASC`;
 
         const commentQuery = `SELECT comment.post_author, comment.message, comment.date, comment.article_id
                                 FROM comment WHERE comment.article_id = ?

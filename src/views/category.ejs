@@ -1,0 +1,14 @@
+<main>
+    <!-- Liste de toutes les recettes liées à chaque catégorie -->
+    <section>
+        <h2>Liste de toutes les recettes de la Catégorie " <%= recipesCategory[0].title%> "</h2>
+        <% for(const recipeCategory of recipesCategory){ %>
+            <ul>
+                <li>
+                   <a href="/recipes/recipe/<%= recipeCategory.article_id%>"><%= recipeCategory.recipeTitle %></a> 
+                </li>
+            </ul>
+        <% } %>
+    
+    </section>
+</main>

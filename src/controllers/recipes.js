@@ -11,7 +11,7 @@ const recipesView = async (req, res) => {
 
         const [result] = await pool.execute(query);
 
-        const categoryQuery = `SELECT category.title FROM category ORDER BY category.title ASC`;
+        const categoryQuery = `SELECT category.id , category.title FROM category ORDER BY category.title ASC`;
 
         const [categoryResult] = await pool.execute(categoryQuery);
 

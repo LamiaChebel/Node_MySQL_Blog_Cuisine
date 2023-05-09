@@ -3,4 +3,6 @@ import categoryView from "../controllers/components/category";
 
 const categoryRouter = Router();
 
-categoryRouter.get("/categories/category/:id", categoryView);
+categoryRouter.get("/categories/:id", categoryView);
+
+export default categoryRouter;

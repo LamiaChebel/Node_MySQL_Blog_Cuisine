@@ -3,7 +3,7 @@
         <h3>Catégories :</h3>
         <ul>
             <% for( const category of categories ) { %>
-            <li> <%= category.title %></li>
+            <li> <a href="/categories/<%= category.id %>"><%= category.title %></a></li>
             <% } %>
         </ul>
 

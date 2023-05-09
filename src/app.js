@@ -5,6 +5,7 @@ import {LOCAL_PORT} from "./config/const.js";
 import homeRouter from "./routes/home.routes.js";
 import recipesRouter from "./routes/recipes.routes.js";
 import commentsRouter from "./routes/commentsRouter.js";
+import categoriesRouter from "./controllers/components/category.js";
 
 
 const PORT = LOCAL_PORT || process.env.PORT;
@@ -21,7 +22,8 @@ app
     .use(express.urlencoded({ extended: true }))
     .use(homeRouter)
     .use(recipesRouter)
-    .use(commentsRouter);
+    .use(commentsRouter)
+    .use(categoriesRouter);
 
 
 app.listen(PORT, () => console.log(`Listening at http://localhost:${PORT}`));
